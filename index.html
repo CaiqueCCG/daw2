@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="DAW" content="width=device-width, initial-scale=1.0">
+    <title>Feriados no Mundo (Calendarific)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000000;
+            color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        h1 {
+            color: #03fc4e;
+            text-align: center;
+        }
+        .container {
+            background-color: #a823ddc7;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+        label, select, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        select, input, button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .holiday {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .holiday h3 {
+            color: #007bff;
+        }
+        .holiday p {
+            margin: 5px 0;
+        }
+        .error {
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DAW Lista de Feriados</h1>
+    <div class="container">
+        <label for="country">Selecione o País:</label>
+        <select id="country">
+            <option value="BR">Brasil</option>
+            <option value="CA">Canadá</option>
+            <option value="US">Estados Unidos</option>
+            <option value="FR">Fraça</option>
+            <option value="UK">Inglaterra</option>
+            <option value="IT">Itália</option>
+            <option value="JP">Japão</option>
+            <option value="MX">México</option>
+            <option value="PT">Portugal</option>
+            <option value="CH">Suiça</option>
+            <!-- Adicione mais opções de país se necessário -->
+        </select>
+
+        <label for="year">Selecione o ano:</label>
+        <input type="number" id="year" value="2024" />
+
+        <button id="fetchHolidays">Obter feriados</button>
+
+        <div id="holidays-list"></div>
+        <div id="error-message" class="error"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
